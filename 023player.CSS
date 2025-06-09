@@ -1,0 +1,194 @@
+:root {
+  --vol-thumb-appearance: none;
+  --vol-thumb-width: 25px;
+  --vol-thumb-height: 15px;
+  --vol-thumb-background-color: #b5724d;
+  --vol-thumb-border-radius: 3px;
+  --vol-thumb-border: 2px solid #4b3d36;
+
+  --progress-appearance: none;
+  --progress-width: 6px;
+  --progress-height: 6px;
+  --progress-background-color: #b04e39;
+  --progress-border-radius: 50%;
+  --progress-transition: 0.3s;
+  --progress-hover-width: 12px;
+  --progress-hover-height: 12px;
+}
+
+body {
+  background-color: #2e2e2c;
+  color: #d9c8b4;
+  font-family: "Courier New", monospace;
+}
+
+#musicList {
+  width: 400px; /* 寬度 20px 太小，建議用 200~300px 適配文字長度 */
+  height: 40px; /* 建議與播放器等高 */
+  background-color: #f2f2f2; /* 淺灰白底色 */
+  color: #2e2e2e;
+  border: 3px solid #a89373; /* 咖啡色邊框 */
+  border-radius: 12px; /* 四角圓弧 */
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 10px;
+  box-shadow: 0 4px 8px rgba(60, 40, 20, 0.5); /* 陰影 */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  background-image: url('https://cdn-icons-png.flaticon.com/512/126/126472.png'); /* 齒輪圖示 */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* 把齒輪靠右排，跟文字保有空間。 */
+  background-size: 16px 16px;
+}
+
+/* 可選：為 select 添加一個小下拉箭頭符號（兼容性考量） */
+#musicList::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+}
+
+
+#setMute {
+  text-decoration: line-through;
+  background-color: #3a2f2b;
+}
+
+#controlPanel {
+  border: 4px solid #6a5a4d;
+  background-color: #3b3732;
+  border-radius: 10px;
+  width: 1000px;
+  padding: 40px;
+  margin: auto;
+  box-shadow: 0px 0px 20px #1a1a1a;
+}
+
+#controlPanel span {
+  min-width: 200px;
+  background-color: #5c4a3b;
+  border-radius: 4px;
+  border-bottom: 3px solid #40362c;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 10px #1e1e1e;
+  transition: all 0.2s;
+  padding: 6px 25px;
+  cursor: pointer;
+  color: #f2e9da;
+  font-family: webdings;
+}
+
+#controlPanel span:hover {
+  box-shadow: 0px 12px 18px -5px #aa8453;
+  transform: scale(1.02);
+}
+
+#controlPanel span:active {
+  box-shadow: 0px 4px 8px #4c3c2a;
+  transform: scale(0.96);
+}
+
+#volumeControl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#volumeControl > input[type="text"] {
+  width: 60px;
+  height: 30px;
+  border: 2px solid #917a5a;
+  background-color: #1f1e1c;
+  color: #f2e9da;
+  text-align: center;
+  font-weight: bold;
+}
+
+#volumeControl > input[type="range"] {
+  width: 400px;
+  height: 8px;
+  appearance: none;
+  background-color: #4d4439;
+  border: 2px solid #7a6857;
+  border-radius: 3px;
+}
+
+#volumeControl > input[type="range"]::-webkit-slider-thumb {
+  appearance: var(--vol-thumb-appearance);
+  width: var(--vol-thumb-width);
+  height: var(--vol-thumb-height);
+  background-color: var(--vol-thumb-background-color);
+  border-radius: var(--vol-thumb-border-radius);
+  border: var(--vol-thumb-border);
+}
+
+#volumeControl > input[type="range"]::-moz-range-thumb {
+  appearance: var(--vol-thumb-appearance);
+  width: var(--vol-thumb-width);
+  height: var(--vol-thumb-height);
+  background-color: var(--vol-thumb-background-color);
+  border-radius: var(--vol-thumb-border-radius);
+  border: var(--vol-thumb-border);
+}
+
+#volumeControl > button {
+  border-radius: 50%;
+  border: 2px solid #715b47;
+  background-color: #3c3228;
+  color: #e2d2bd;
+  width: 40px;
+  height: 40px;
+}
+
+#information > div {
+  text-align: center;
+  background-color: #3a332e;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #6c5c4b;
+  border-radius: 5px;
+}
+
+#progressBar {
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background-color: #4e463c;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+#progressBar::-webkit-slider-thumb {
+  appearance: var(--progress-appearance);
+  background-color: var(--progress-background-color);
+  width: var(--progress-width);
+  height: var(--progress-height);
+  border-radius: var(--progress-border-radius);
+}
+
+#progressBar::-webkit-slider-thumb:hover {
+  width: var(--progress-hover-width);
+  height: var(--progress-hover-height);
+  transition: var(--progress-transition);
+}
+
+#progressBar::-moz-range-thumb {
+  appearance: var(--progress-appearance);
+  background-color: var(--progress-background-color);
+  width: var(--progress-width);
+  height: var(--progress-height);
+  border-radius: var(--progress-border-radius);
+}
+
+#progressBar::-moz-range-thumb:hover {
+  width: var(--progress-hover-width);
+  height: var(--progress-hover-height);
+  transition: var(--progress-transition);
+}
