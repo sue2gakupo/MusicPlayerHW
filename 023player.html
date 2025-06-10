@@ -4,36 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicPlayer</title>
+    <title>05_MusicPlayer</title>
     <link rel="stylesheet" href="023player.CSS" />
 </head>
 
 <body>
-    <audio src="music/AnytimeAnywhere.mp3" title="【Anytime Anywhere-milet】" controls id="myMusic"
+
+    
+
+    <audio src="music/nothing.mp3" title="【Nothing's gonna chage my love for you】" controls id="myMusic"
         onended="musicStatus()"></audio>
     <hr>
 
-    <!-- 功能鈕 -->
+    <!-- 功能鈕區塊 -->
     <div id="controlPanel">
+        
         <select id="musicList" onchange="changeMusic(0)">
-            <option value="music/AnytimeAnywhere.mp3"> 【 Anytime Anywhere-milet 】</option>
-            <option value="music/hakujistu.mp3">【 白日-King Gnu 】</option>
-            <option value="music/sayonaramataistuka.mp3"> 【 さよーならまたいつか-米津玄師 】</option>
-            <option value="music/tabun.mp3">【 たぶん-YOASOBI 】</option>
+            <option value="music/nothing.mp3">【Nothing's gonna change my love for you】</option>
+            <option value="music/airball.mp3">【告白氣球】</option>
+            <option value="music/moon.mp3">【私奔到月球】</option>
+            <option value="music/travel.mp3">【 旅行 】</option>
         </select>
         <hr>
+
         <div id="functionButtons">
-            <span onclick="playMusic()">4</span>
-            <!-- <span onclick="pauseMusic()">;</span> -->
-            <span onclick="stopMusic()">&lt;</span> <!-- 【&lt;】代換"<""-->
-            <span onclick="changeMusic(1)">9</span>
-            <span onclick="changeTime(-5)">7</span>
-            <span onclick="changeTime(+5)">8</span>
-            <span onclick="changeMusic(-1)">:</span>
-            <span onclick="setMute()">U</span>
-            <span onclick="loopOne()">q</span>
-            <span onclick="setRandom()">s</span>
-            <span onclick="loopAll()">`</span>
+            <img src="logo.png" alt="本分署Logo" id="logo">
+            <span onclick="playMusic()" title="播放">4</span>
+            <!-- <span onclick="pauseMusic()">;</span>  -->
+            <span onclick="stopMusic()" title="停止">&lt;</span> <!-- 【&lt;】代換"<""-->
+            <span onclick="changeMusic(1)" title="下一首">9</span>
+            <span onclick="changeTime(-5)" title="倒轉">7</span>
+            <span onclick="changeTime(+5)" title="快轉">8</span>
+            <span onclick="changeMusic(-1)" title="上一首">:</span>
+            <span onclick="setMute()" title="靜音/取消靜音">U</span>
+            <span onclick="loopOne()" title="單曲循環">q</span>
+            <span onclick="setRandom()" title="隨機播放">s</span>
+            <span onclick="loopAll()" title="全曲循環">`</span>
         </div>
         <hr>
         <div id="volumeControl">
@@ -47,8 +53,8 @@
         <hr>
         <div id="information">
             <div>00:00/00:00</div>
-            <div>播放器已失控</div>
-            <div>我放乖乖有用嗎QQ</div>
+            <div>simple is best</div>
+            <div>Music Player</div>
         </div>
     </div>
 

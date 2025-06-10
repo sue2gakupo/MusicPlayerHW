@@ -22,26 +22,47 @@ body {
   font-family: "Courier New", monospace;
 }
 
+
+
+#logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 10px;
+  position: static;
+  /* 取消原本的 fixed */
+  top: auto;
+  right: auto;
+}
+
 #musicList {
-  width: 400px; /* 寬度 20px 太小，建議用 200~300px 適配文字長度 */
-  height: 40px; /* 建議與播放器等高 */
-  background-color: #f2f2f2; /* 淺灰白底色 */
+  width: 400px;
+  /* 寬度 20px 太小，建議用 200~300px 適配文字長度 */
+  height: 40px;
+  /* 建議與播放器等高 */
+  background-color: #f2f2f2;
+  /* 淺灰白底色 */
   color: #2e2e2e;
-  border: 3px solid #a89373; /* 咖啡色邊框 */
-  border-radius: 12px; /* 四角圓弧 */
+  border: 3px solid #a89373;
+  /* 咖啡色邊框 */
+  border-radius: 12px;
+  /* 四角圓弧 */
   font-size: 14px;
   font-family: 'Courier New', Courier, monospace;
   padding-left: 10px;
-  box-shadow: 0 4px 8px rgba(60, 40, 20, 0.5); /* 陰影 */
+  box-shadow: 0 4px 8px rgba(60, 40, 20, 0.5);
+  /* 陰影 */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
   margin-bottom: 20px;
 
-  background-image: url('https://cdn-icons-png.flaticon.com/512/126/126472.png'); /* 齒輪圖示 */
+  background-image: url('https://cdn-icons-png.flaticon.com/512/126/126472.png');
+  /* 齒輪圖示 */
   background-repeat: no-repeat;
-  background-position: right 10px center; /* 把齒輪靠右排，跟文字保有空間。 */
+  background-position: right 10px center;
+  /* 把齒輪靠右排，跟文字保有空間。 */
   background-size: 16px 16px;
 }
 
@@ -101,7 +122,7 @@ body {
   margin-top: 20px;
 }
 
-#volumeControl > input[type="text"] {
+#volumeControl>input[type="text"] {
   width: 60px;
   height: 30px;
   border: 2px solid #917a5a;
@@ -111,7 +132,7 @@ body {
   font-weight: bold;
 }
 
-#volumeControl > input[type="range"] {
+#volumeControl>input[type="range"] {
   width: 400px;
   height: 8px;
   appearance: none;
@@ -120,7 +141,7 @@ body {
   border-radius: 3px;
 }
 
-#volumeControl > input[type="range"]::-webkit-slider-thumb {
+#volumeControl>input[type="range"]::-webkit-slider-thumb {
   appearance: var(--vol-thumb-appearance);
   width: var(--vol-thumb-width);
   height: var(--vol-thumb-height);
@@ -129,7 +150,7 @@ body {
   border: var(--vol-thumb-border);
 }
 
-#volumeControl > input[type="range"]::-moz-range-thumb {
+#volumeControl>input[type="range"]::-moz-range-thumb {
   appearance: var(--vol-thumb-appearance);
   width: var(--vol-thumb-width);
   height: var(--vol-thumb-height);
@@ -138,18 +159,26 @@ body {
   border: var(--vol-thumb-border);
 }
 
-#volumeControl > button {
+#volumeControl>button {
   border-radius: 50%;
   border: 2px solid #715b47;
   background-color: #3c3228;
   color: #e2d2bd;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
-#information > div {
+#volumeControl>button:hover {
+  background-color: #715b47;
+  color: #ffffff;
+  transform: scale(1.5);
+}
+
+#information>div {
+  color: #1f1e1c;
+  font-size: 1.2rem;
   text-align: center;
-  background-color: #3a332e;
+  background-color: #f3e2ce;
   padding: 10px;
   margin-top: 20px;
   border: 1px solid #6c5c4b;
@@ -191,4 +220,16 @@ body {
   width: var(--progress-hover-width);
   height: var(--progress-hover-height);
   transition: var(--progress-transition);
+}
+
+
+/* RWD */
+@media (max-width: 600px) {
+  #controlPanel {
+    width: 98%;
+    padding: 10px;
+  }
+  #musicList {
+    width: 98%;
+  }
 }
