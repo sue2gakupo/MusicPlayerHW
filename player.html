@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>05_MusicPlayer</title>
-    <link rel="stylesheet" href="023player.CSS" />
+    <link rel="stylesheet" href="player.CSS" />
 </head>
 
 <body>
 
     
 
-    <audio src="music/nothing.mp3" title="【Nothing's gonna chage my love for you】" controls id="myMusic"
+    <audio src="music/nothing.mp3" title="【Nothing's gonna change my love for you】" controls id="myMusic"
         onended="musicStatus()"></audio>
     <hr>
 
@@ -27,8 +27,11 @@
         </select>
         <hr>
 
+         <div id="logoimage">
+            <img src="logo.png" alt="分署logo" id="logoimage">
+        </div>
+
         <div id="functionButtons">
-            <img src="logo.png" alt="本分署Logo" id="logo">
             <span onclick="playMusic()" title="播放">4</span>
             <!-- <span onclick="pauseMusic()">;</span>  -->
             <span onclick="stopMusic()" title="停止">&lt;</span> <!-- 【&lt;】代換"<""-->
@@ -42,23 +45,27 @@
             <span onclick="loopAll()" title="全曲循環">`</span>
         </div>
         <hr>
+
         <div id="volumeControl">
             <input type="range" oninput="setVolumeByRangeBar()" value="50"><!-- 預設音量為50-->
-            <button onclick="changeVolume(1)">+</button>
             <button onclick="changeVolume(-1)">-</button>
+            <button onclick="changeVolume(1)">+</button>
             <input type="text" value="100" readonly><!-- DOM操作：顯示目前音量;volumeControl.children[3] -->
         </div>
         <hr>
-        <input type="range" id="progressBar" min="0" value="0" oninput="setProgress"> <!-- 進度條;progressBar -->
+
+        <input type="range" id="progressBar" min="0" value="0" oninput="setProgress()"> <!-- 進度條;progressBar -->
         <hr>
+
         <div id="information">
             <div>00:00/00:00</div>
             <div>simple is best</div>
             <div>Music Player</div>
         </div>
+
     </div>
 
-    <script src="023player.js"></script>
+    <script src="player.js"></script>
 
 </body>
 

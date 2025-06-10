@@ -17,7 +17,7 @@ var rangeVolume = volumeControl.children[0]; //音量調整的range
 
 var musicDuration = information.children[0];
 var playStatus = information.children[1];
-var btnplay = functionButtons.children[0]; //播放鈕
+var btnPlay = functionButtons.children[0]; //播放鈕
 
 var infoStatus = information.children[2]; //單曲循環鈕
 
@@ -45,13 +45,13 @@ function musicStatus() {
 
 
 function loopOne() {
-    infobtnLoopOne.innerHTML = infoStatus.innerHTML == "單曲循環" ? "正常" : "單曲循環";
+    infoStatus.innerHTML = infoStatus.innerHTML == "單曲循環" ? "正常" : "單曲循環";
 }
 function setRandom() {
-    infobtnLoopOne.innerHTML = infoStatus.innerHTML == "單曲循環" ? "正常" : "隨機播放";
+    infoStatus.innerHTML = infoStatus.innerHTML == "單曲循環" ? "正常" : "隨機播放";
 }
 function loopAll() {
-    infobtnLoopOne.innerHTML = infoStatus.innerHTML == "單曲循環" ? "正常" : "全曲循環";
+    infoStatus.innerHTML = infoStatus.innerHTML == "單曲循環" ? "正常" : "全曲循環";
 }//三個按鈕做互斥
 
 
