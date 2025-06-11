@@ -57,14 +57,23 @@ body {
   background-size: 16px 16px;
 }
 
-#logoimage {
-  width: 300px;
-  height: 300px;
-  display: block;
-  margin: 10px auto;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px #1a1a1a;
+
+
+#information {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* 可依需求調整間距 */
+  justify-content: center;
+  /* 置中排列，可依需求調整 */
 }
+
+#logoimage {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
 
 #musicList:hover {
   background-color: #e0d4c1;
@@ -84,7 +93,7 @@ body {
   padding: 40px;
   margin: 10px auto;
   box-shadow: 0px 0px 20px #1a1a1a;
-  
+
   justify-content: center
 }
 

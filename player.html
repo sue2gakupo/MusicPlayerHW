@@ -10,7 +10,7 @@
 
 <body>
 
-    
+
 
     <audio src="music/nothing.mp3" title="【Nothing's gonna change my love for you】" controls id="myMusic"
         onended="musicStatus()"></audio>
@@ -24,11 +24,9 @@
             <option value="music/moon.mp3">【私奔到月球】</option>
             <option value="music/travel.mp3">【 旅行 】</option>
         </select>
-        
 
-         <div id="logoimage">
-            <img src="logo.png" alt="分署logo" id="logoimage" >
-        </div>
+
+
 
         <div id="functionButtons">
             <span onclick="playMusic()" title="播放">4</span>
@@ -53,14 +51,19 @@
         </div>
         <hr>
 
-        <input type="range" id="progressBar" min="0" value="0" oninput="setProgress()"> 
+        <input type="range" id="progressBar" min="0" value="0" oninput="setProgress()">
         <hr>
 
         <div id="information">
             <div>00:00/00:00</div>
             <div>simple is best</div>
-            <div>Music Player</div>
+            <div id="information2">Music Player</div>
+            <div id="logoimage">
+                <img src="logo.png" alt="分署logo" title="分署logo" id="logoimage" >
+            </div>
         </div>
+
+
 
     </div>
 
