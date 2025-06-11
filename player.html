@@ -16,19 +16,18 @@
         onended="musicStatus()"></audio>
     <hr>
 
-    <!-- 功能鈕區塊 -->
+
     <div id="controlPanel">
-        
         <select id="musicList" onchange="changeMusic(0)">
             <option value="music/nothing.mp3">【Nothing's gonna change my love for you】</option>
             <option value="music/airball.mp3">【告白氣球】</option>
             <option value="music/moon.mp3">【私奔到月球】</option>
             <option value="music/travel.mp3">【 旅行 】</option>
         </select>
-        <hr>
+        
 
          <div id="logoimage">
-            <img src="logo.png" alt="分署logo" id="logoimage">
+            <img src="logo.png" alt="分署logo" id="logoimage" >
         </div>
 
         <div id="functionButtons">
@@ -50,11 +49,11 @@
             <input type="range" oninput="setVolumeByRangeBar()" value="50"><!-- 預設音量為50-->
             <button onclick="changeVolume(-1)">-</button>
             <button onclick="changeVolume(1)">+</button>
-            <input type="text" value="100" readonly><!-- DOM操作：顯示目前音量;volumeControl.children[3] -->
+            <input type="text" value="100" readonly>
         </div>
         <hr>
 
-        <input type="range" id="progressBar" min="0" value="0" oninput="setProgress()"> <!-- 進度條;progressBar -->
+        <input type="range" id="progressBar" min="0" value="0" oninput="setProgress()"> 
         <hr>
 
         <div id="information">

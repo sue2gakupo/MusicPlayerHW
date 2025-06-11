@@ -17,28 +17,16 @@
 }
 
 body {
-  background-color: #2e2e2c;
+  background-color: #808074;
   color: #d9c8b4;
   font-family: "Courier New", monospace;
 }
 
 
-
-#logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-right: 10px;
-  position: static;
-  /* 取消原本的 fixed */
-  top: auto;
-  right: auto;
-}
-
 #musicList {
   width: 400px;
   /* 寬度 20px 太小，建議用 200~300px 適配文字長度 */
-  height: 40px;
+  height: 45px;
   /* 建議與播放器等高 */
   background-color: #f2f2f2;
   /* 淺灰白底色 */
@@ -53,8 +41,11 @@ body {
   box-shadow: 0 4px 8px rgba(60, 40, 20, 0.5);
   /* 陰影 */
   appearance: none;
+  /* 移除瀏覽器預設的樣式，可以自訂外觀 */
   -webkit-appearance: none;
+  /*  針對 Chrome/Safari（Webkit 核心）的前綴，確保效果一致 */
   -moz-appearance: none;
+  /* 針對 Firefox（Mozilla 核心）的前綴 */
   cursor: pointer;
   margin-bottom: 20px;
 
@@ -66,16 +57,21 @@ body {
   background-size: 16px 16px;
 }
 
-/* 可選：為 select 添加一個小下拉箭頭符號（兼容性考量） */
-#musicList::after {
-  content: "▼";
-  position: absolute;
-  right: 10px;
-  pointer-events: none;
+#logoimage {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #1a1a1a;
 }
 
+#musicList:hover {
+  background-color: #e0d4c1;
+  /* 懸停時變淺色 */
+}
 
-#setMute {
+#controlPanel .setMute {
   text-decoration: line-through;
   background-color: #3a2f2b;
 }
@@ -84,25 +80,28 @@ body {
   border: 4px solid #6a5a4d;
   background-color: #3b3732;
   border-radius: 10px;
-  width: 1000px;
+  width: 600px;
   padding: 40px;
-  margin: auto;
+  margin: 10px auto;
   box-shadow: 0px 0px 20px #1a1a1a;
+  
+  justify-content: center
 }
 
 #controlPanel span {
-  min-width: 200px;
-  background-color: #5c4a3b;
+  min-width: 30px;
+  background-color: #8d7d71;
   border-radius: 4px;
   border-bottom: 3px solid #40362c;
   font-size: 1rem;
   text-align: center;
   box-shadow: 0px 4px 10px #1e1e1e;
   transition: all 0.2s;
-  padding: 6px 25px;
+  padding: 6px 15px;
   cursor: pointer;
   color: #f2e9da;
   font-family: webdings;
+  margin: 5px 2px;
 }
 
 #controlPanel span:hover {
@@ -111,7 +110,7 @@ body {
 }
 
 #controlPanel span:active {
-  box-shadow: 0px 4px 8px #4c3c2a;
+  box-shadow: 0px 4px 8px #eee6dd;
   transform: scale(0.96);
 }
 
@@ -191,7 +190,7 @@ body {
   height: 6px;
   background-color: #4e463c;
   margin-bottom: 20px;
-  
+
 }
 
 #progressBar::-webkit-slider-thumb {
@@ -229,6 +228,7 @@ body {
     width: 98%;
     padding: 10px;
   }
+
   #musicList {
     width: 98%;
   }
