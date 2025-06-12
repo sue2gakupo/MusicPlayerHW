@@ -93,12 +93,12 @@ function setMusicDuration() {
     // 更新進度條的背景漸層
     progressBar.style.backgroundImage = `linear-gradient(to right, rgb(245, 173, 92) ${w}%,rgb(236, 236, 234) ${w}%)`;
 
-    /////////////////////////////////////////////////////////////
+    
 
 }
 
 
-
+/////////////////////////////////////////////////////////////
 //目前歌曲長度初始化
 function ProgressInitial() {
     progressBar.max = myMusic.duration * 10000; // 設置進度條的最大值為音樂的總時長

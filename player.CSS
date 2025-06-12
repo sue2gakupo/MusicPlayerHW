@@ -25,48 +25,28 @@ body {
 
 #musicList {
   width: 400px;
-  /* 寬度 20px 太小，建議用 200~300px 適配文字長度 */
   height: 45px;
-  /* 建議與播放器等高 */
+  appearance: none;
   background-color: #f2f2f2;
-  /* 淺灰白底色 */
   color: #2e2e2e;
   border: 3px solid #a89373;
-  /* 咖啡色邊框 */
   border-radius: 12px;
-  /* 四角圓弧 */
   font-size: 14px;
   font-family: 'Courier New', Courier, monospace;
   padding-left: 10px;
-  box-shadow: 0 4px 8px rgba(60, 40, 20, 0.5);
-  /* 陰影 */
-  appearance: none;
-  /* 移除瀏覽器預設的樣式，可以自訂外觀 */
-  -webkit-appearance: none;
-  /*  針對 Chrome/Safari（Webkit 核心）的前綴，確保效果一致 */
-  -moz-appearance: none;
-  /* 針對 Firefox（Mozilla 核心）的前綴 */
   cursor: pointer;
-  margin-bottom: 20px;
-
-  background-image: url('https://cdn-icons-png.flaticon.com/512/126/126472.png');
-  /* 齒輪圖示 */
+  margin-bottom: 10px;
+  background-image: url('https://cdn-icons-png.flaticon.com/128/563/563541.png');
   background-repeat: no-repeat;
   background-position: right 10px center;
-  /* 把齒輪靠右排，跟文字保有空間。 */
   background-size: 16px 16px;
 }
 
-
-
-#information {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  /* 可依需求調整間距 */
-  justify-content: center;
-  /* 置中排列，可依需求調整 */
+#musicList:hover {
+  background-color: #e0d4c1;
+  /* 懸停時變淺色 */
 }
+
 
 #logoImage {
   width: 300px;
@@ -76,10 +56,6 @@ body {
 }
 
 
-#musicList:hover {
-  background-color: #e0d4c1;
-  /* 懸停時變淺色 */
-}
 
 #controlPanel .setMute {
   text-decoration: line-through;
@@ -94,7 +70,6 @@ body {
   padding: 40px;
   margin: 10px auto;
   box-shadow: 0px 0px 20px #1a1a1a;
-
   justify-content: center
 }
 
@@ -132,8 +107,8 @@ body {
 }
 
 #volumeControl>input[type="text"] {
-  width: 60px;
-  height: 30px;
+  width: 50px;
+  height: 25px;
   border: 2px solid #917a5a;
   background-color: #1f1e1c;
   color: #f2e9da;
