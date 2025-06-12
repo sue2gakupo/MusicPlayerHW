@@ -68,10 +68,11 @@ body {
   /* 置中排列，可依需求調整 */
 }
 
-#logoimage {
-  width: 40px;
-  height: 40px;
-  margin: 0;
+#logoImage {
+  width: 300px;
+  height: 300px;
+  margin: 5px auto;
+  display: flex;
 }
 
 

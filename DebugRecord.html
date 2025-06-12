@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayerDebugRecord</title>
+</head>
+
+<body>
+    <h1>🎵 MusicPlayerDebugRecord</h1>
+    <h2>🧩 問題：音量鍵跟音量調整滑塊沒反應</h1>
+    <p>🔍 原因：在HTML裡面 img src="photo/18.jpg" alt="分署logo" 插入volumeControl的區塊，
+        導致JS的變數定義抓不到var txtVolume = volumeControl.children[3] ，
+        因為被圖片插入後改變子元素順序了(==子元素順序改變導致 JS 抓錯 DOM)</p>
+
+    <h2>✅ 解法：</h2>
+    <p>把img src 獨立放在其他div外面，還可以單獨設定CSS</p>
+    <h2>🎓 學到：</h2>
+    <p>若仍是在定義變數時抓取子元素，
+        會被另外加入該區塊的程式碼打亂順序，
+        另外加入的程式碼要注意擺放的位置會不會影響既有的程式順序</p>
+    <hr>
+
+
+</body>
+
+</html>

@@ -64,12 +64,11 @@ function changeMusic(n) {
     musicList.children[i + n].selected = true;//選擇的音樂索引
 
 
-    //console.log(btnplay.innerText);
+    //console.log(btnPlay.innerText);
 
-    if (btnplay.innerText == ";") {
+    if (btnPlay.innerText == ";") {
         myMusic.onloadeddata = playMusic; //音樂載入完成後，再開始播放音樂
     }
-
 }
 
 
@@ -126,7 +125,7 @@ function setVolumeByRangeBar() {
     txtVolume.value = rangeVolume.value;
     myMusic.volume = txtVolume.value / 100; //真正寫入音量屬性值
     //用漸層-處理音量bar隨著button移動(塗音量條的顏色)
-    rangeVolume.style.backgroundImage = `linear-gradient(to right, rgb(253, 167, 68) ${rangeVolume.value}%,rgb(255, 255, 255) ${rangeVolume.value}%)`;
+    rangeVolume.style.backgroundImage = `linear-gradient(to right, rgba(252, 160, 55, 0.8) ${rangeVolume.value}%,rgb(255, 255, 255) ${rangeVolume.value}%)`;
 
 }
 
@@ -146,7 +145,8 @@ function changeVolume(v) {
 function setMute() {
     myMusic.muted = !myMusic.muted;
     event.target.className = event.target.className == "setMute" ? "" : "setMute";
-    playStatus.innerHTML = "已靜音";
+    updateInfo(myMusicS.muted ? "已靜音" : "取消靜音");
+    
 }
 
 //快轉倒轉同一個按鈕//有參數的function//同一個參數不同結果
