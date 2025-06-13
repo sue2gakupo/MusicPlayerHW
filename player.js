@@ -6,7 +6,7 @@ var progressBar = document.getElementById("progressBar");
 var musicList = document.getElementById("musicList")
 var functionButtons = document.getElementById("functionButtons");
 
-var txtVolume = volumeControl.children[3]; //音量顯示input
+var txtVolume = volumeControl.children[3]; //音量顯示txt
 var rangeVolume = volumeControl.children[0]; //音量調整range
 
 var musicDuration = information.children[0];
@@ -51,8 +51,6 @@ function changeMusic(n) {
     myMusic.src = musicList.children[i + n].value; //更改音樂來源
     myMusic.title = musicList.children[i + n].innerText;
     musicList.children[i + n].selected = true;//選擇的音樂索引
-
-
     //console.log(btnPlay.innerText);
 
     if (btnPlay.innerText == ";") {
@@ -91,7 +89,7 @@ function setMusicDuration() {
     var w = myMusic.currentTime / myMusic.duration * 100;
 
     // 更新進度條的背景漸層
-    progressBar.style.backgroundImage = `linear-gradient(to right, rgb(245, 173, 92) ${w}%,rgb(236, 236, 234) ${w}%)`;
+    progressBar.style.backgroundImage = `linear-gradient(to right, rgb(143, 114, 81) ${w}%,rgb(236, 236, 234) ${w}%)`;
 
     
 
@@ -121,8 +119,7 @@ function setVolumeByRangeBar() {
 
 //音量調整
 function changeVolume(v) {
-    /* myMusic.Volume = (myMusic.volume * 100 + v) / 100;
-    console.log(myMusic.volume); */
+
     rangeVolume.value = parseInt(rangeVolume.value) + v;
     setVolumeByRangeBar(); //呼叫音量調整的function
 
@@ -160,6 +157,7 @@ function playMusic() {
     ProgressInitial(); //音樂開始播放時，才開始更新進度條的值
 
     updateInfo("目前播放" + myMusic.title);
+    document.getElementById('logoImage').classList.add('playing');
 }
 
 
@@ -169,6 +167,7 @@ function pauseMusic() {
     event.target.innerHTML = "4";
     event.target.onclick = playMusic;
     updateInfo("音樂暫停");
+    document.getElementById('logoImage').classList.remove('playing');
 }
 
 //停止音樂
@@ -178,4 +177,5 @@ function stopMusic() {
     updateInfo("音樂停止");
     btnPlay.innerText = "4";
     btnPlay.onclick = playMusic;
+    document.getElementById('logoImage').classList.remove('playing');
 }

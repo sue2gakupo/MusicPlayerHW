@@ -10,18 +10,18 @@
 
 <body>
 
-    <audio src="music/tabun.mp3" title="【たぶん-YOASOBI】" controls id="myMusic"
-        onended="musicStatus()"></audio>
+    <audio src="music/tabun.mp3" title="【たぶん-YOASOBI】" controls id="myMusic" onended="musicStatus()"></audio>
     <hr>
 
 
     <div id="controlPanel">
 
         <select id="musicList" onchange="changeMusic(0)">
-            <option value="music/tabun.mp3">【たぶん-YOASOBI】</option>
-            <option value="music/hakujitsu.mp3">【白日-King Gnu】</option>
-            <option value="music/sayonaramataistuka.mp3">【さよーならまたいつか！-米津玄師】</option>
-            <option value="music/AnytimeAnywhere.mp3">【Anytime Anywhere -milet】</option>
+            <option value="music/tabun.mp3">♦ たぶん-YOASOBI</option>
+            <option value="music/hakujitsu.mp3">♦ 白日-King Gnu</option>
+            <option value="music/sayonaramataistuka.mp3">♦ さよーならまたいつか！-米津玄師</option>
+            <option value="music/akumanoko.mp3">♦ 悪魔の子-ヒグチアイ</option>
+            <option value="music/basanka.mp3">♦ 晩餐歌ばさんかん-tuki.</option>
         </select>
 
         <img src="logo.png" id="logoImage" alt="分署logo" title="分署logo">
@@ -47,14 +47,14 @@
             <button onclick="changeVolume(1)">+</button>
             <input type="text" value="100" readonly>
         </div>
-        
-        
+
+
         <input type="range" id="progressBar" min="0" value="0" oninput="setProgress()">
 
         <div id="information">
             <div>00:00 / 00:00</div>
             <div>目前狀態</div>
-            <div>Music Player</div>
+            <div>播放模式</div>
         </div>
 
     </div>
