@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>05_MusicPlayer</title>
     <link rel="stylesheet" href="player.CSS" />
+    
 </head>
 
 <body>
@@ -30,10 +31,10 @@
             <span onclick="playMusic()" title="播放/暫停">4</span>
             <!-- <span onclick="pauseMusic()">;</span>  -->
             <span onclick="stopMusic()" title="停止">&lt;</span> <!-- 【&lt;】代換"<""-->
-            <span onclick="changeMusic(1)" title="下一首">9</span>
+            <span onclick="changeMusic(-1)" title="上一首">9</span>
             <span onclick="changeTime(-5)" title="倒轉">7</span>
             <span onclick="changeTime(+5)" title="快轉">8</span>
-            <span onclick="changeMusic(-1)" title="上一首">:</span>
+            <span onclick="changeMusic(1)" title="下一首">:</span>
             <span onclick="setMute()" title="靜音/取消靜音">U</span>
             <span onclick="setMode('單曲循環')" title="單曲循環">q</span>
             <span onclick="setMode('隨機播放')" title="隨機播放">s</span>
