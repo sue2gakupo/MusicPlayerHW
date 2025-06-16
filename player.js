@@ -49,7 +49,7 @@ function changeMusic(n) {
     var i = musicList.selectedIndex;//選擇的音樂索引
     //console.log(i + n);
     myMusic.src = musicList.children[i + n].value; //更改音樂來源
-    /* 當 i + n 超過 musicList 的子元素數量（我目前最大索引值是4(5首歌)），musicList.children[i + n] 就會出現 undefined， */
+    /* 當 i + n 超過 musicList 的子元素數量（我目前最大索引值是4(5首歌)），musicList.children[i + n] 就會出現 undefined */
     myMusic.title = musicList.children[i + n].innerText;
     musicList.children[i + n].selected = true;//選擇的音樂索引
     //console.log(btnPlay.innerText);
